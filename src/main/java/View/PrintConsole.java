@@ -8,4 +8,8 @@ public class PrintConsole {
         System.out.println("Department: " + department );
         System.out.println("Temporary password:  " + password);
     }
+
+    public static void printEmail(String email){
+        System.out.println("Your email address: " + email);
+    }
 }

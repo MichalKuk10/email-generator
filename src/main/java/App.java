@@ -4,9 +4,11 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        Email email = new Email( "John", "Test");
+        System.out.println("Please provide new hire Name and Surname: ");
+        Scanner in = new Scanner(System.in);
+        String answer = in.nextLine();
+        String[] nameSurname = answer.split(" ");
+        new Email(nameSurname[0], nameSurname[1]);
 
-
-        System.out.println("This email: " + email.getFirstName() + " " +  email.getLastName());
     }
 }
