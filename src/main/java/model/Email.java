@@ -1,5 +1,7 @@
 package model;
 
+import View.PrintConsole;
+
 import java.util.Scanner;
 
 public class Email {
@@ -7,6 +9,7 @@ public class Email {
     private String lastName;
     private Departaments department;
     private String password;
+    private int defaultPasswordLength = 8;
 
 
     //constructor to receive first name and last name of employee
@@ -14,8 +17,9 @@ public class Email {
         this.firstName = firstName;
         this.lastName = lastName;
         this.department = setDepartment();
+        this.password = PasswordGenerator.generateRandomPassword(defaultPasswordLength);
 
-        System.out.println("Department: " + this.department);
+        PrintConsole.printConsole(this.department, this.password);
     }
 
     //ask for department
