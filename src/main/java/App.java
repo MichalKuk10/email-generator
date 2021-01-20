@@ -1,5 +1,12 @@
+import model.Email;
+
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) {
-        System.out.println("test");
+        Email email = new Email( "John", "Test");
+
+
+        System.out.println("This email: " + email.getFirstName() + " " +  email.getLastName());
     }
 }
